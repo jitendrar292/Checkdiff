@@ -44,7 +44,9 @@ def dashboard():
     st.write("### Inventory List")
     st.dataframe(inventory_data[['Product', 'Stock Qty']])
     st.write("### Transfer Status")
-    st.write("Pending → Store B, In Transit → Store A, Completed → Store C")
+    st.write("Pending → Store B")
+    st.write("In Transit → Store A")
+    st.write("Completed → Store C")
 
 # Manage Inventory
 def manage_inventory():
@@ -53,9 +55,9 @@ def manage_inventory():
     st.dataframe(inventory_data)
 
     st.write("### Transfer Suggestions")
-    st.write("- Ultraboost: 12 Units")
-    st.write("- Samba: 10 Units")
-    st.write("- Bounce: 8 Units")
+    st.write("- Ultraboost: 12 Units → Store C")
+    st.write("- Samba: 10 Units → Store C")
+    st.write("- Bounce: 8 Units→ Store C")
 
 # Transfer Request Form
 def submit_transfer():
@@ -76,7 +78,7 @@ def approvals():
     approvals_data = [
         {"Name": "John Doe", "Status": "Pending"},
         {"Name": "Alex Carry", "Status": "Pending"},
-        {"Name": "Santi Lal", "Status": "Pending"},
+        {"Name": "Sant Lal", "Status": "Pending"},
         {"Name": "Ashwini", "Status": "Pending"}
     ]
     for person in approvals_data:
